@@ -1,4 +1,4 @@
-console.log('Starting app.js');
+// console.log('Starting app.js');
 
 const fs = require('fs');
 // const os = require('os');
@@ -27,7 +27,7 @@ const notes = require('./notes.js');
 var argv = yargs.argv;
 // var command = process.argv[2];
 var command = argv._[0];
-console.log('Command', command);
+// console.log('Command', command);
 // console.log('Process', process.argv);
 // console.log('Yargs', argv);
 
@@ -44,7 +44,15 @@ if(command === 'add') {
     // else
     //     console.log(`Note is undefined.`);
 } else if(command == 'list') {
-    notes.getAll();
+    var allNotes = notes.getAll();
+    if(allNotes) {
+        console.log(`Printing ${allNotes.length} note(s).`);
+        allNotes.forEach(note => {
+            notes.logNote(note);
+        });
+    } else
+        console.log(`List is empty.`);
+    
 } else if(command === 'read') {
     var readNote = notes.getNote(argv.title);
     
