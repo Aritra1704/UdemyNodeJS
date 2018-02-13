@@ -3,7 +3,7 @@ const apikey = require('./api_key.js');
 
 var geocodeAddress = (address, callback) => {
     var encodedAddress = encodeURIComponent(address);
-    const api_key = apikey.api_key;
+    const api_key = apikey.API_KEY;
     
     request({
         // url: 'http://maps.google.com/maps/api/geocode/json?address=plot%2083%20mega%20hills%20madhapur',
