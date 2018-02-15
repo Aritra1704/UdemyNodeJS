@@ -1,0 +1,42 @@
+ADD SSH KEYS TO GITHUB
+
+TO CHECK YOUR SSH KEY
+ls -al ~/.ssh
+
+TO GENERATE SSH KEY
+ssh-keygen -t rsa -b 4096 -C ‘aritra1704@gmail.com’
+
+TO CREATE SSH AGENT
+eval "$(ssh-agent -s)"
+
+TO ADD IDENTITY TO PRIVATE SSH KEY
+ssh-add ~/.ssh/id_rsa
+
+TO COPY PUBLIC SSH KEY FROM MAC
+pbcopy < ~/.ssh/id_rsa.pub
+
+
+HEROKU:
+TO INSTALL HEROKU
+sudo npm install -g heroku-cli
+
+CHECK HEROKU VERSION
+heroku --version
+
+CHECK HEROKU HELP
+heroku --help
+
+ADD KEYS TO HEROKU
+heroku keys:add
+
+REMOVE KEYS FROM HEROKU
+heroku keys:remove (provide the email to keys)
+
+CHECK HEROKU KEYS
+heroku keys
+
+START HEROKU FOR AN APP
+heroku create
+
+CHECK ENVIRONMENT VARIABLES
+env
