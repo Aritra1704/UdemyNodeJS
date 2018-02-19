@@ -11,10 +11,28 @@ it('should add two numbers', () => {
     //     throw new Error(`Expected 44, but got ${res}`);
 });
 
+it('should async add two numbers', (done) => {
+    utils.asyncAdd(4, 3, (sum) => {
+        expect(sum).toBe(7).toBeA('number');
+        done();
+    });
+});
+
 it('should square a number', () => {
     var res = utils.square(15);
     expect(res).toBe(225);
     expect(res).toBeA('number');
+    // if(res !== 225)
+    //     throw new Error(`Expected 225, but got ${res}`);
+});
+
+it('should async square a number', (done) => {
+    utils.asyncSquare(3, (res) => {
+        expect(res).toBe(9).toBeA('number');
+        done();
+    })
+
+    
     // if(res !== 225)
     //     throw new Error(`Expected 225, but got ${res}`);
 });
