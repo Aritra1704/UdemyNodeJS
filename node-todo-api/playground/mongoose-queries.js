@@ -30,9 +30,9 @@ var userId = '5a9548da249c981bfd1b5b2d';
 //     console.log('Todo by ID', todo);
 // }).catch((e) => console.log(e));
 
-User.findById(userId).then((user) => {
-    if(!user) {
-        return console.log('User id not found');
-    }
-    console.log('User by Id', user);
-}).catch((e)=> console.log(e)); 
+// User.findById(userId).then((user) => {
+//     if(!user) {
+//         return console.log('User id not found');
+//     }
+//     console.log('User by Id', user);
+// }).catch((e)=> console.log(e)); 
